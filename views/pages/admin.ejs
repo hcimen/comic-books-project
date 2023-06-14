@@ -1,0 +1,65 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
+
+<style>
+    
+    ::-webkit-scrollbar:vertical{
+        display:none;
+    }
+
+    ::-webkit-scrollbar {
+        width: 1%;
+        height: 35px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: #063C5e;; 
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: #fccf14; 
+    }
+
+</style>
+
+
+
+<div class="outside">
+    <br><br><br><br><br>
+    <div class="main-body" id="scrollbar">
+    <h1>ADMIN PAGE</h1>
+
+    <a href='/logout'><button class="delete" id="logout"> LOGOUT </button></a>  <br> <br>
+
+    <a href='/admin-console/create-book'><button class="delete" id="addNewComic"> ADD NEW COMIC </button></a>  <br> <br>
+
+
+    <table class="table">
+        <tr>
+            <th>COMIC TITLE</th>
+            <th >EDIT</th>
+            <th>DELETE</th>
+        </tr>
+        <% for (comic of allComics) { %>
+            <tr>
+                <td> <%= comic.title %> </td>
+            
+                <td>
+                    <a href="/admin-console/update-book/<%= comic._id %>"><button class="edit">EDIT</button></a>
+                </td>
+                
+                <td>
+                    <form action="/admin-console/update-book/<%= comic._id %>?_method=DELETE" method="POST" enctype="application/x-www-form-urlencoded" class="inlineDelete"> <button class="delete">DELETE</button> </form>
+                </td>
+            
+            </tr>
+           
+        <% } %>
+
+    </table> <br>
+</div> <br><br><br><br><br>
+</div>
+
+    <%- include('../partials/footer') -%> 

@@ -1,0 +1,53 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
+
+<div class="outside"> <br><br><br><br><br>
+    <div class="main-body">    
+    <h1>CREATE NEW COMIC</h1>
+    
+ <form class="createForm" action="/admin-console/create-book"?_method=POST' method="POST">
+    <div class="responsive-form">
+
+    <label for="title">Title: </label>
+    <input type="text" name="title" id="title" placeholder="Title" required> <br> <br>
+    
+    <label for="author">Author: </label>
+    <input type="text" name="author" id="author" placeholder="Author" required> <br> <br> 
+
+    <label for="publisher">Publisher: </label>
+    <select name="publisher" id="publisher">
+        <option value="Select" disabled selected> Select </option>
+        <option value="BOOM! Box"> BOOM! Box </option>
+        <option value="DC Comics"> DC Comics </option>
+        <option value="Harry N. Abrams">Harry N. Abrams</option>
+        <option value="Icon Books">Icon Books</option>
+        <option value="Image Comics">Image Comics</option>
+        <option value="Marvel">Marvel</option>
+        <option value="Simon & Schuster">Simon & Schuster</option>
+        <option value="Top Shelf Productions">Top Shelf Productions</option>
+        <option value="VIZ Media LLC">VIZ Media LLC</option>
+    </select> <br> <br>
+
+    <label for="genre">Genre: </label>
+    <input type="text" name="genre" id="genre" placeholder="Genre"> <br> <br>
+
+    <label for="pages">Number of Pages: </label>
+    <input type="number" name="pages" id="pages" placeholder="number of pages"> <br> <br>
+
+    <label for="rating">Rating: </label>
+    <input class="numberinput" type="number" name="rating" id="rating" value="" min="0" max="5"> <br> <br>
+
+    <label for="synopsis" style="vertical-align: top;">Synopsis: </label>
+    <textarea name="synopsis" id="synopsis" cols="20" rows="10" placeholder="Synopsis"></textarea> <br><br><br>
+    </div>
+
+    <button type="submit" class="delete" id="submit"> Submit </button>
+
+</form>
+
+</div> <br><br><br><br><br>
+</div>
+
+<%- include('../partials/footer') -%> 

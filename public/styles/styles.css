@@ -1,0 +1,469 @@
+:root {
+--yellow : #fccf14; 
+--darkblue: #063C5e;
+--otherblue: #103C5e;
+}
+
+body {
+    width: 100%;
+    max-width: 100vw;
+    margin: 0;
+    overflow-x: hidden;
+    font-size: 1.4rem;
+    font-family: 'Open Sans';
+}
+
+.navbar {
+ background-color: var(--darkblue);
+ display: flex;
+ flex-wrap: wrap;
+ justify-content:space-between;
+ font-family: 'Fredericka the Great', sans-serif;
+ position: fixed;
+ top: 0;
+ width: 100%;
+}
+
+.navbar-logo {
+    background-color:var(--darkblue);
+}
+
+.inline {
+    width:40%;
+    display: flex;
+    justify-content:space-evenly   ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.inlineDelete {
+    width:100%;
+    display: flex;
+    justify-content:space-evenly   ;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+div.inline h3 {
+    color: var(--yellow);
+}
+
+.hamburger {
+    display: none;
+    padding: 5%;
+    position: relative;
+}
+
+.inline-content{
+    display: none;
+    position: absolute;
+    color: var(--yellow);
+    margin-left: -110%;
+    margin-top: -55%;
+    z-index: 1;
+}
+
+.hamburger:hover .inline-content {
+    display: block;
+    color: #fccf14;
+  }
+
+.inline-content a:hover {
+    background-color: var(--darkblue);
+}
+
+a:link, a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: yellow;
+    font-weight: bold;
+}
+
+a:active {
+    color: blue;
+    font-weight: bold;
+    background-color: yellow;
+}
+
+
+div.main-body a:link, div.main-body a:visited {
+    color: var(--darkblue);
+    text-decoration: none;
+}
+
+div.main-body a:hover {
+    color: teal;
+    font-weight: bold;
+}
+
+div.main-body a:active {
+    color: blue;
+    font-weight: bold;
+    background-color: yellow;
+}
+
+.main-body {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    border: var(--darkblue) solid 5px;
+    padding: 2%;
+}
+
+.main-body-inside {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5%;
+}
+
+.mainBodyParts {
+    max-width: 35%;
+    min-width: 22%;
+}
+
+#mainBodyPartsText {
+    text-align: center;
+}
+
+.outside {
+    background: linear-gradient(to bottom, #ddfbfb 0%, #1b6767 100%);
+}
+
+div.main-body h1, h2 {
+    color:var(--darkblue);
+    text-align: center;
+}
+
+div.main-body span {
+    text-align: center;
+}
+
+img {
+    width: 200px;
+}
+
+div.mainBodyParts img {
+    width: 200px;
+    height: 300px;
+    margin: auto;
+    display: block;
+}
+
+.th {
+    text-align: center;
+}
+
+.numberinput {
+    width: 24px;
+}
+
+.nlogo {
+    width: 300px !important;
+}
+/* 
+.flogo {
+     width: 150px !important;
+} */
+
+table, tr, td {
+    border: solid black;
+    border-collapse: collapse;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+}
+
+table tr:nth-child(odd){background-color: #c2c2c2;}
+
+.edit {
+    background-color: var(--otherblue);
+    color: white;
+    text-align: center;
+
+}
+
+.delete {
+    background-color: var(--yellow);
+    color: var(--otherblue);
+}
+
+button {
+    color: darkblue;
+    display: block;
+    margin: auto;
+    min-width: 20%;
+    width: auto;
+    height: auto;
+    font-size: inherit;
+}
+
+.createForm {
+    text-align: right;
+    margin-right: 15%;
+}
+
+input, select, textarea, .numberinput{
+    width: 40% ;
+    box-sizing: border-box;
+}
+
+#submit  {
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+#displayMore {
+    margin: auto;
+}
+
+.panther-main {
+    width: fit-content;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.panther-first {
+    background-color: var(--darkblue);
+    border: 10px solid var(--yellow);
+    border-radius: 50px 50px 0 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.black-panther{
+    width: 400px;
+    border-radius: 25px;
+    border: 5px solid white;
+    margin-left : auto;
+    margin-right: auto;
+    display: block;
+}
+
+.title-panther {
+   color: var(--yellow);
+   text-align: center;
+}
+
+.panther-second {
+    margin-left: 50px;
+    border: 10px solid var(--yellow);
+    border-top: 0;
+    border-radius: 0 0 50px 50px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+}
+
+
+.description {
+    color: black;
+    font-size: x-large;
+    margin: 0;
+    padding: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: justify;
+}
+
+.stitle {
+    color: var(--darkblue);
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.stitle1 {
+    font-style: italic;
+}
+
+.footer{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: var(--darkblue) ;
+    color: white;
+    border-top: 10px solid var(--yellow);
+    padding-left: 10px;
+    text-align: justify;
+    font-family: 'Fredericka the Great';
+}
+
+.inline-footer {
+    width:auto;
+    display: inline;
+}
+
+.awesome {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+div.inline-footer h3 {
+    color: var(--yellow);
+}
+
+div.outside ul {
+    padding-left: 40%;
+
+}
+
+label {
+display: inline;
+text-align: left;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) { 
+    .responsive-form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5%;
+        flex-wrap:wrap;
+    }
+
+    input, select, textarea, .numberinput{
+        width: 90% ;
+        height: 48px;
+        font-size: 2rem;
+    }
+
+    .createForm {
+        text-align: right;
+        margin-right: 0%;
+        margin-left: 0%;
+    }
+
+    body{
+        font-size: 2rem;
+    }
+
+    .inline {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .inline-footer {
+        width: 100%;
+        margin-right: 40%;
+        font-size: 1.8rem;
+    }
+
+    .awesome{
+        width: 40%;
+        justify-content: space-between;
+    }
+
+    .footer{
+        justify-content: flex-start;
+        padding-left: 5%;        
+    }
+
+    #scrollbar{
+        overflow-x: auto;
+        width: 80%;
+        white-space: nowrap;
+    }
+}
+
+@media screen and (min-width: 768px) { 
+    body{
+        font-size: 2.2rem;
+    }
+
+    input, select, textarea, .numberinput{
+        min-width: 40% ;
+        height: 60px;
+        font-size: 2.2rem;
+    }
+
+    .inline-footer {
+        width: 45%;
+        font-size: 2.0rem;
+    }
+
+    .awesome{
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .footer{
+        justify-content: flex-start;
+        padding-left: 5%;        
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    
+    body{
+        font-size: 2.5rem;
+    }
+
+    .panther-main{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .panther-first {
+        background-color: var(--darkblue);
+        border: 10px solid var(--yellow);
+        border-right: 0px;
+        border-radius: 50px 0 0 50px;
+        margin-left: auto;
+        margin-right: auto;
+        display: inline !important;
+        align-content: space-around;
+        min-width: 55%;
+    }
+
+    .panther-title{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    div.fsecond img {
+        width: 70%;
+    }
+
+    .panther-second {
+        border: 10px solid var(--yellow);
+        border-left: 0;
+        border-radius: 0 50px 50px 0;
+        margin-left: auto;
+        margin-right: auto;
+        background-color: white;
+    }
+
+    input, select, textarea, .numberinput{
+        min-width: 50% ;
+        height: 60px;
+        font-size: 2.5rem;
+    }
+
+    .inline-footer {
+        min-width: fit-content;
+        width: 20%;
+        font-size: 2.2rem;
+    }
+
+    .awesome{
+        width: 60%;
+        justify-content: space-between;
+    }
+
+    .footer{
+        justify-content: space-around;
+        padding-left: 5%;        
+    }
+}

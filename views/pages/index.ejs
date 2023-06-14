@@ -1,0 +1,143 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
+<div class="outside"> <br><br><br><br><br>
+    <div class="main-body">
+    <h1>CODESQUAD COMICS</h1>
+
+    <h2> <i class="fa-brands fa-instagram"></i> </h2>
+ 
+    <p>CodeSquad Comics is a collection of graphic novels read by Harun Cimen. The site is intended to    display comic book covers along with information about each book, including the author, a rating, and other details about the graphic novel. Browse through the complete collection below. Click on the cover image or the Details link to see even more information for each graphic novel including the publisher, genre, number of pages, and a brief synopsis. The About page includes meta information about this collection. Login is only available to the site administrator at this time.</p> <br>
+    </div> <br><br>
+<!-- </div> -->
+
+<!-- <div class="outside"> --> <br><br>
+    <div class="main-body">
+    <h1>COMPLETE COLLECTION</h1>
+
+    <div class="main-body-inside"> 
+<!-- 
+    <div class="mainBodyParts">     
+        <a href="#"> <img src="/images/fun-home.jpg" alt="fun-home"> </a> 
+        <span id="mainBodyPartsText"> <p> <i> Fun Home: A Family <br> Tragicomic </i> <br>
+        by Alison Bechdel <br>
+        5 stars <br> 
+        <a href="#">Details </a> </p> </span>   <br>
+        <i><%= comicData.title %></i> by <%= comicData.author %> <br>
+         <br> <br>
+    </div> -->
+
+    <% for (comic of comicData) { %>
+        <div class="mainBodyParts">
+          <a href="/books/<%= comic._id %>"> 
+            <img src="<%= comic.image %>" alt="<%= comicData.title %>">
+          </a>
+          <span id="mainBodyPartsText"> 
+            <p>
+              <i><%= comic.title %></i> <br>
+              by <%= comic.author %> <br>
+              <%= comic.rating %> stars <br>
+              <a href="/books/<%= comic._id %>">Details</a>
+            </p>
+          </span>
+          <br> <br> <br>
+        </div>
+      <% } %>
+    
+<!--     <div class="mainBodyParts">     
+        <a href="#"> <img src="/images/watchmen.jpg" alt="watchmen"> </a>
+        <span id="mainBodyPartsText"> <p> <i> Watchmen </i> <br>
+        by Alan Moore <br>
+        5 stars</span> <br>
+        <span> <a href="#">Details </a> </p> </span>  <br> <br> <br>
+    </div>
+
+    <div class="mainBodyParts">     
+        <a href="#"> <img src="/images/hunter-x-hunter.jpg" alt="hunter-x-hunter"> </a>
+        <span  id="mainBodyPartsText"> <p> <i> Hunter X Hunter Vol. <br> 1 </i> <br>
+        by Yoshiro Togashi <br> 5 stars </span> <br>
+        <span> <a href="#">Details </a> </p> </span>  <br> <br> <br>
+    </div>
+
+    <div class="mainBodyParts">     
+        <a href="#"> <img src="/images/lumberjanes.jpg" alt="lumberjanes"> </a>
+        <span id="mainBodyPartsText" > <p> <i> Lumberjanes Vol. 1 </i> <br>
+        by Noelle Stevenson <br> 
+        4 stars <br>
+        <a href="#">Details </a> </p> </span>  <br> <br> <br>
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="#"> <img src="/images/one-piece.jpg" alt="one-piece"> </a>
+        <span id="mainBodyPartsText"> <p> <i> One Piece, Vol. 1: <br> Romance Dawn </i> <br>
+        by Eiichiro Oda <br> 
+        5 stars </span> <br>
+        <span> <a href="#">Details </a> </p> </span>  <br> <br> <br>
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="#"> <img src="/images/wake.jpg" alt="wake"> </a>
+        <span id="mainBodyPartsText"> <p><i> Wake: The Hidden <br> History of Women- <br> Led Slave Revolts </i> <br>
+        by Rebecca Hall <br> 
+        4 stars <br>
+        <a href="#">Details </a> </p> </span>  <br> <br> <br>
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="/books/:id"> <img src="/images/black-panther.jpg" alt="black-panther"> </a>
+        <span id="mainBodyPartsText"> <p> <i> Black Panther: A <br> Nation Under Our <br> Feet Book 1  </i> <br>
+        by Ta-Nehisi Coates <br> 
+        3 stars <br>
+        <a href="black-panther.html">Details </a> </p> </span> <br> <br>
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="#"> <img src="/images/the-walking-dead.jpg" alt="the-walking-dead"> </a>
+        <span id="mainBodyPartsText"> <p> <i> The Walking Dead, <br> Vol.1: Days Gone <br> Bye  </i> <br>
+        by Robert Kirkman <br> 
+        4 stars </span> <br>
+        <span> <a href="#">Details </a> </p> </span>  <br> <br> <br>
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="#"> <img src="/images/march.jpg" alt="march"> </a>
+        <span id="mainBodyPartsText"> <p> <i> March: Book One  </i> <br>
+        by John Lewis <br> 
+        5 stars <br>
+        <a href="#">Details </a> </p> </span> 
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="#"> <img src="/images/batman.jpg" alt="batman"> </a>
+        <span id="mainBodyPartsText"> <p>  <i> Batman: The Dark <br> Knight Returns  </i> <br>
+        by Frank Miller <br> 
+        3 stars <br>
+        <a href="#">Details </a> </span>
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="#"> <img src="/images/queer.jpg" alt="queer"> </a>
+        <span id="mainBodyPartsText"> <p> <i> Queer: A Graphic <br> History  </i> <br>
+        by Meg-John Barker <br> 
+        4 stars <br>
+        <a href="#">Details </a> </span>
+    </div>
+
+    <div class="mainBodyParts">
+        <a href="#"> <img src="/images/parable-of-the-sower.jpg" alt="parable-of-the-sower"> </a>
+        <span id="mainBodyPartsText"> <p> <i> Parable of the Sower  </i> <br>
+        by Octavia E. Butler <br> 
+        4 stars <br>
+        <a href="#">Details </a> </p> </span>
+    </div> -->
+</div>
+
+    <button class="delete" id="displayMore"> DISPLAY MORE </button> 
+
+</div> <br><br><br><br><br>
+</div>
+
+<!-- the end -->
+
+<%- include('../partials/footer') -%> 

@@ -1,0 +1,24 @@
+<%- include('../partials/head') -%> 
+
+<%- include('../partials/nav') -%> 
+
+    
+<div class="outside"> <br><br><br><br><br>
+    <div class="main-body">
+    <h1>LOGIN</h1>
+    <form class="createForm" action="/login" method="POST">
+  <div class="responsive-form">      
+    <label for="email">Username: </label>
+    <input type="text" name="username" id="username" placeholder="Username" required> <br> <br>
+    
+    <label for="pass">Password: </label>
+    <input type="password" name="password" id="pass" placeholder="Password" minlength="10" required> <br> <br> <br> 
+  </div>
+    <button type="submit" id="Submit" class="delete"> Submit </button>
+</form>
+<a href="/auth/google" role="button" target="_blank><button type="submit" id="" class="delete"> Google </button> </a>
+</div> <br><br><br><br><br>
+</div>
+
+
+<%- include('../partials/footer') -%> 

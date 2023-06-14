@@ -1,0 +1,31 @@
+<%- include('../partials/head') -%>
+
+<%- include('../partials/nav') -%>
+
+<div class="outside"> <br><br><br><br><br>
+
+  <div class="panther-main">
+    <div class="panther-first">
+      <div class="panther-title">
+        <h2 class="title-panther"></h2>
+      </div>
+
+      <div class="fsecond">
+        <img class="black-panther"  alt="black-panther" src="<%= inventoryItem.image %>">
+      </div> <br>
+    </div>
+
+    <div class="panther-second">
+      <p class="description">
+        <span class="stitle"> Title:</span> <%= inventoryItem.title %> <span class="stitle1"> </span> <br>
+        <br> <span class="stitle"> Author:</span>  <%= inventoryItem.author %><br>
+        <br> <span class="stitle"> Publisher:</span> <%= inventoryItem.publisher %> <br>
+        <br> <span class="stitle"> Genre:</span> <%= inventoryItem.genre %> <br>
+        <br> <span class="stitle"> Number of pages:</span> <%= inventoryItem.pages %> <br>
+        <br> <span class="stitle"> Rating:</span> <%= inventoryItem.rating %> <br>
+        <br> <span class="stitle"> Synopsis:</span> <%= inventoryItem.synopsis %> <br>
+      </p>
+    </div>
+  </div> <br><br><br><br><br>
+
+  <%- include('../partials/footer') -%>
